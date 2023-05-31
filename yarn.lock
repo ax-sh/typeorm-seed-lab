@@ -220,7 +220,7 @@
   "resolved" "https://registry.npmjs.org/diff/-/diff-4.0.2.tgz"
   "version" "4.0.2"
 
-"dotenv@^16.0.3":
+"dotenv@^16.0.3", "dotenv@^16.1.1":
   "integrity" "sha512-UGmzIqXU/4b6Vb3R1Vrfd/4vGgVlB+mO+vEixOdfRhLeppkyW2BMhuK7TL8d0el+q9c4lW9qK2wZYhNLFhXYLA=="
   "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.1.1.tgz"
   "version" "16.1.1"
