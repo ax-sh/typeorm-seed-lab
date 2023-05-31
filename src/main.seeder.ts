@@ -2,15 +2,14 @@ import { DataSource } from "typeorm";
 import { Seeder, SeederFactoryManager } from "typeorm-extension";
 // import { faker } "@faker-js/faker";
 
-import { Post } from "./post.entity";
-import { User } from "./user.entity";
+import { Post } from "./entities/post.entity";
+import { User } from "./entities/user.entity";
 import { faker } from "@faker-js/faker";
-
 
 export class MainSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
-    factoryManager: SeederFactoryManager,
+    factoryManager: SeederFactoryManager
   ): Promise<any> {
     const postsRepository = dataSource.getRepository(Post);
 
@@ -27,7 +26,7 @@ export class MainSeeder implements Seeder {
             author: faker.helpers.arrayElement(users),
           });
           return made;
-        }),
+        })
     );
     await postsRepository.save(posts);
   }

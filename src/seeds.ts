@@ -6,10 +6,10 @@ require("dotenv").config();
 
 import { MainSeeder } from "./main.seeder";
 
-import { User } from "./user.entity";
-import { Post } from "./post.entity";
-import { UsersFactory } from "./users.factory";
-import { PostsFactory } from "./post.factory";
+import { User } from "./entities/user.entity";
+import { Post } from "./entities/post.entity";
+import { UsersFactory } from "./factories/users.factory";
+import { PostsFactory } from "./factories/post.factory";
 
 const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
 console.log(888, process.env);
