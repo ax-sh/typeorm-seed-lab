@@ -6,3 +6,6 @@ npx typeorm-model-generator -h <host> -d <database_name> -e <engine: mysql|postg
 
 
 ```
+
+
+[https://github.com/Kononnable/typeorm-model-generator](https://github.com/Kononnable/typeorm-model-generator)
