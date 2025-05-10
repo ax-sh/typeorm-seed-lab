@@ -1,9 +1,11 @@
 import { type IMemoryDb, newDb } from "pg-mem";
 import type { DataSource } from "typeorm";
 
-import { User } from "./entities/user.entity.ts";
-import { createTypeormDataSource } from "./create-typeorm-datasource.ts";
+import { User } from "./entities/user.entity";
+
 import { runSeeders } from "typeorm-extension";
+import { createTypeormDataSource } from "./create-typeorm-datasource";
+import { beforeAll, describe, expect, it } from "bun:test";
 
 describe("sql seed test", () => {
   let db: IMemoryDb;

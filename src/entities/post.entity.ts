@@ -1,8 +1,8 @@
 import {
-  Entity,
   Column,
-  PrimaryGeneratedColumn,
+  Entity,
   ManyToOne,
+  PrimaryGeneratedColumn,
   type Relation,
 } from "typeorm";
 import { User } from "./user.entity";

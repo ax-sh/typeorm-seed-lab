@@ -9,7 +9,7 @@ import { faker } from "@faker-js/faker";
 export class MainSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
-    factoryManager: SeederFactoryManager
+    factoryManager: SeederFactoryManager,
   ): Promise<any> {
     const postsRepository = dataSource.getRepository(Post);
 
@@ -26,7 +26,7 @@ export class MainSeeder implements Seeder {
             author: faker.helpers.arrayElement(users),
           });
           return made;
-        })
+        }),
     );
     await postsRepository.save(posts);
   }
