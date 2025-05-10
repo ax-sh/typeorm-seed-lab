@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
-    "seed": "tsx src/seeds.ts"
+    "seed": "bun src/seeds.ts",
+    "test": "bun test",
+    "test:watch": "bun test --watch"
   },
   "keywords": [],
   "author": "",
@@ -26,8 +27,7 @@
   "devDependencies": {
     "@types/bun": "^1.2.12",
     "@types/node": "^20.2.5",
-    "tsx": "^4.19.4",
     "typescript": "^5.0.4",
-    "vitest": "^3.1.3"
+
   }
 }
