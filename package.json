@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "ts-node src/seeds.ts"
+    "seed": "tsx src/seeds.ts"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
-    "ts-node": "^10.9.1",
+    "tsx": "^4.19.4",
     "typescript": "^5.0.4"
   }
 }
