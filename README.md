@@ -1,5 +1,8 @@
 # typeorm-seed-2023
 
+# NEVER RUN ON PROD DATABASE
+# USE IN CAUTION WHEN IN DEV DATABASE
+
 ## This repo contains scripts to seed SQL database using Typeorm
 
 ### You can use the below code for generating Typeform entities from an already existing database
