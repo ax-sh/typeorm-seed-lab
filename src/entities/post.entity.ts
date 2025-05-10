@@ -3,7 +3,7 @@ import {
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
-  Relation,
+  type Relation,
 } from "typeorm";
 import { User } from "./user.entity";
 
