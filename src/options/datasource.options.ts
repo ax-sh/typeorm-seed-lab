@@ -1,9 +1,9 @@
 import type { DataSourceOptions } from "typeorm";
 import type { SeederOptions } from "typeorm-extension";
-import { User } from "../entities/user.entity.ts";
-import { Post } from "../entities/post.entity.ts";
-import { seederOptions } from "./seeder.options.ts";
-import { env } from "../env.ts";
+import { User } from "../entities/user.entity";
+import { Post } from "../entities/post.entity";
+import { seederOptions } from "./seeder.options";
+import { env } from "../env";
 
 const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = env;
 export const options: DataSourceOptions & SeederOptions = {

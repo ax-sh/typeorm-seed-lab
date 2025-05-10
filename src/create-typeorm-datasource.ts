@@ -1,9 +1,9 @@
 import { DataType, type IMemoryDb } from "pg-mem";
-import { User } from "./entities/user.entity.ts";
-import { Post } from "./entities/post.entity.ts";
-import { UsersFactory } from "./factories/users.factory.ts";
-import { PostsFactory } from "./factories/post.factory.ts";
-import { MainSeeder } from "./main.seeder.ts";
+import { User } from "./entities/user.entity";
+import { Post } from "./entities/post.entity";
+import { UsersFactory } from "./factories/users.factory";
+import { PostsFactory } from "./factories/post.factory";
+import { MainSeeder } from "./main.seeder";
 import { type SeederOptions } from "typeorm-extension";
 import { type DataSourceOptions } from "typeorm";
 
