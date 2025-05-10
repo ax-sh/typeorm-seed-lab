@@ -5,7 +5,7 @@ import { User } from "./entities/user.entity";
 import { Post } from "./entities/post.entity";
 import { seederOptions } from "./options/seeder.options";
 
-export function createTypeormDataSource(db: IMemoryDb) {
+export function createInMemoryTypeormDataSource(db: IMemoryDb) {
   db.public.registerFunction({
     name: "current_database",
     args: [],

@@ -4,7 +4,7 @@ import type { DataSource } from "typeorm";
 import { User } from "./entities/user.entity";
 
 import { runSeeders } from "typeorm-extension";
-import { createTypeormDataSource } from "./create-typeorm-datasource";
+import { createInMemoryTypeormDataSource } from "./create-in-memory-typeorm-data-source";
 import { beforeAll, describe, expect, it } from "bun:test";
 import { Post } from "./entities/post.entity";
 import { locOf } from "pg-mem/types/execution/exec-utils";
@@ -20,7 +20,7 @@ describe("sql seed test", () => {
       autoCreateForeignKeyIndices: true,
     });
 
-    dataSource = createTypeormDataSource(db);
+    dataSource = createInMemoryTypeormDataSource(db);
 
     await dataSource.initialize();
     await dataSource.synchronize();
