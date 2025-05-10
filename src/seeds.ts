@@ -4,7 +4,7 @@ import { runSeeders } from "typeorm-extension";
 import { env } from "./env";
 import { options } from "./options/datasource.options";
 
-const CONFIRM_SEEDING = !false;
+const CONFIRM_SEEDING = false;
 
 console.info("using these environment for seeding the database", env);
 console.warn(
