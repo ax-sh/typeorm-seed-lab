@@ -11,7 +11,7 @@ describe("sql seed test", () => {
 
   beforeAll(async () => {
     //==== create a memory db
-    const db = newDb({
+    db = newDb({
       // 👉 Recommended when using Typeorm .synchronize(), which creates foreign keys but not indices !
       autoCreateForeignKeyIndices: true,
     });
@@ -31,7 +31,7 @@ describe("sql seed test", () => {
     await runSeeders(dataSource);
     const repo = dataSource.getRepository(User);
     const users = await repo.find();
-    expect(users).toHaveLength(7)
+    expect(users).toHaveLength(7);
     console.table(users);
     // destroy on each test end
     // await dataSource.destroy()
