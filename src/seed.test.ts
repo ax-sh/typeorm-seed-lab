@@ -24,16 +24,16 @@ describe("sql seed test", () => {
   it("should count initial users", async () => {
     const countUsers = await dataSource.getRepository(User).count();
 
-    expect(countUsers).toBe(0)
+    expect(countUsers).toBe(0);
   });
 
   it("should ", async () => {
     await runSeeders(dataSource);
-    const repo = dataSource.getRepository(User)
+    const repo = dataSource.getRepository(User);
     const users = await repo.find();
+    expect(users).toHaveLength(7)
     console.table(users);
-    // destroy on each test
+    // destroy on each test end
     // await dataSource.destroy()
-
   });
 });
