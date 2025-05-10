@@ -24,8 +24,10 @@ export class MainSeeder implements Seeder {
       Array(POST_COUNT)
         .fill("")
         .map(async () => {
+          //   assign post to random user
+          const author = faker.helpers.arrayElement(users);
           const made = await postsFactory.make({
-            author: faker.helpers.arrayElement(users),
+            author,
           });
           return made;
         }),

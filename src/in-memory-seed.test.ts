@@ -36,13 +36,14 @@ describe("sql seed test", () => {
     const postRepo = dataSource.getRepository(Post);
     const users = await userRepo.find();
     expect(users).toHaveLength(7);
-    const posts = await postRepo.find();
+    const posts = await postRepo.count();
+    expect(posts).toEqual(17);
     // console.table(posts)
     console.table(users);
-    const userWithPosts = await userRepo.find({ relations: ["posts"]})
+    const userWithPosts = await userRepo.find({ relations: ["posts"] });
     for (const p of userWithPosts) {
-      console.log(p.userName)
-      console.table(p.posts)
+      console.log(p.userName);
+      console.table(p.posts);
     }
 
     // destroy on each test end
