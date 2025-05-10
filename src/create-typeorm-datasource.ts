@@ -1,11 +1,9 @@
+import { type SeederOptions } from "typeorm-extension";
+import { type DataSourceOptions } from "typeorm";
 import { DataType, type IMemoryDb } from "pg-mem";
 import { User } from "./entities/user.entity";
 import { Post } from "./entities/post.entity";
-import { UsersFactory } from "./factories/users.factory";
-import { PostsFactory } from "./factories/post.factory";
-import { MainSeeder } from "./main.seeder";
-import { type SeederOptions } from "typeorm-extension";
-import { type DataSourceOptions } from "typeorm";
+import { seederOptions } from "./options/seeder.options";
 
 export function createTypeormDataSource(db: IMemoryDb) {
   db.public.registerFunction({
@@ -33,8 +31,7 @@ export function createTypeormDataSource(db: IMemoryDb) {
   const options: SeederOptions & DataSourceOptions = {
     type: "postgres",
     entities: [User, Post],
-    factories: [UsersFactory, PostsFactory],
-    seeds: [MainSeeder],
+    ...seederOptions,
   };
   return db.adapters.createTypeormDataSource(options);
 }
