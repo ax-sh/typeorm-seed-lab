@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "seed": "tsx src/seeds.ts"
   },
   "keywords": [],
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/node": "^20.2.5",
     "tsx": "^4.19.4",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vitest": "^3.1.3"
   }
 }
