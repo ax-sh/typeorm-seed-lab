@@ -39,6 +39,12 @@ describe("sql seed test", () => {
     const posts = await postRepo.find();
     // console.table(posts)
     console.table(users);
+    const userWithPosts = await userRepo.find({ relations: ["posts"]})
+    for (const p of userWithPosts) {
+      console.log(p.userName)
+      console.table(p.posts)
+    }
+
     // destroy on each test end
     // await dataSource.destroy()
   });
