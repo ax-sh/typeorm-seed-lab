@@ -1,8 +1,8 @@
 {
-  "name": "typeorm-seed-2023",
+  "name": "typeorm-seed-2025",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/seeds.ts",
   "scripts": {
     "seed": "bun src/seeds.ts",
     "test": "bun test",
