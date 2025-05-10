@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { Seeder, SeederFactoryManager } from "typeorm-extension";
+import { type Seeder, SeederFactoryManager } from "typeorm-extension";
 
 import { Post } from "./entities/post.entity";
 import { User } from "./entities/user.entity";
@@ -9,7 +9,7 @@ export class MainSeeder implements Seeder {
   public async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager,
-  ): Promise<any> {
+  ): Promise<void> {
     const postsRepository = dataSource.getRepository(Post);
 
     const userFactory = factoryManager.get(User);
@@ -19,7 +19,6 @@ export class MainSeeder implements Seeder {
     const POST_COUNT = 17;
 
     const users = await userFactory.saveMany(USER_COUNT);
-
 
     const posts = await Promise.all(
       Array(POST_COUNT)

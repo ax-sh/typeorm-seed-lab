@@ -6,6 +6,8 @@ import { User } from "./entities/user.entity";
 import { runSeeders } from "typeorm-extension";
 import { createTypeormDataSource } from "./create-typeorm-datasource";
 import { beforeAll, describe, expect, it } from "bun:test";
+import {Post} from "./entities/post.entity";
+import {locOf} from "pg-mem/types/execution/exec-utils";
 
 describe("sql seed test", () => {
   let db: IMemoryDb;
@@ -31,9 +33,12 @@ describe("sql seed test", () => {
 
   it("should ", async () => {
     await runSeeders(dataSource);
-    const repo = dataSource.getRepository(User);
-    const users = await repo.find();
+    const userRepo = dataSource.getRepository(User);
+    const postRepo = dataSource.getRepository(Post);
+    const users = await userRepo.find();
     expect(users).toHaveLength(7);
+    const posts = await postRepo.find();
+    // console.table(posts)
     console.table(users);
     // destroy on each test end
     // await dataSource.destroy()
