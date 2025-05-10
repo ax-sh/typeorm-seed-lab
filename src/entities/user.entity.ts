@@ -9,6 +9,9 @@ export class User {
   @Column()
   userName?: string;
 
-  @OneToMany(() => Post, (post) => post.author)
+  @OneToMany(
+    () => Post,
+    (post) => post.author,
+  )
   posts?: Post[];
 }

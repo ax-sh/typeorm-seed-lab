@@ -1,6 +1,6 @@
-import { z } from "zod";
-import { config } from "dotenv";
 import appRootPath from "app-root-path";
+import { config } from "dotenv";
+import { z } from "zod";
 
 const USE_SAFE_DOTENV = false;
 if (USE_SAFE_DOTENV) {

@@ -1,9 +1,9 @@
-import { DataSource } from "typeorm";
-import { type Seeder, SeederFactoryManager } from "typeorm-extension";
+import type { DataSource } from "typeorm";
+import type { Seeder, SeederFactoryManager } from "typeorm-extension";
 
+import { faker } from "@faker-js/faker";
 import { Post } from "./entities/post.entity";
 import { User } from "./entities/user.entity";
-import { faker } from "@faker-js/faker";
 
 export class MainSeeder implements Seeder {
   public async run(

@@ -1,8 +1,8 @@
-import { type SeederOptions } from "typeorm-extension";
-import { type DataSourceOptions } from "typeorm";
 import { DataType, type IMemoryDb } from "pg-mem";
-import { User } from "./entities/user.entity";
+import type { DataSourceOptions } from "typeorm";
+import type { SeederOptions } from "typeorm-extension";
 import { Post } from "./entities/post.entity";
+import { User } from "./entities/user.entity";
 import { seederOptions } from "./options/seeder.options";
 
 export function createInMemoryTypeormDataSource(db: IMemoryDb) {

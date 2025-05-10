@@ -1,13 +1,12 @@
+import { beforeAll, describe, expect, it } from "bun:test";
 import { type IMemoryDb, newDb } from "pg-mem";
+
 import type { DataSource } from "typeorm";
 
 import { User } from "./entities/user.entity";
-
 import { runSeeders } from "typeorm-extension";
 import { createInMemoryTypeormDataSource } from "./create-in-memory-typeorm-data-source";
-import { beforeAll, describe, expect, it } from "bun:test";
 import { Post } from "./entities/post.entity";
-import { locOf } from "pg-mem/types/execution/exec-utils";
 
 describe("sql seed test", () => {
   let db: IMemoryDb;

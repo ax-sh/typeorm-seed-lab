@@ -1,4 +1,4 @@
-import { Faker } from "@faker-js/faker";
+import type { Faker } from "@faker-js/faker";
 import { setSeederFactory } from "typeorm-extension";
 import { User } from "../entities/user.entity";
 
