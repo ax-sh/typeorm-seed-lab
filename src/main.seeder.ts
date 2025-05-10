@@ -1,6 +1,5 @@
 import { DataSource } from "typeorm";
 import { Seeder, SeederFactoryManager } from "typeorm-extension";
-// import { faker } "@faker-js/faker";
 
 import { Post } from "./entities/post.entity";
 import { User } from "./entities/user.entity";
@@ -16,10 +15,14 @@ export class MainSeeder implements Seeder {
     const userFactory = factoryManager.get(User);
     const postsFactory = factoryManager.get(Post);
 
-    const users = await userFactory.saveMany(7);
+    const USER_COUNT = 7;
+    const POST_COUNT = 17;
+
+    const users = await userFactory.saveMany(USER_COUNT);
+
 
     const posts = await Promise.all(
-      Array(17)
+      Array(POST_COUNT)
         .fill("")
         .map(async () => {
           const made = await postsFactory.make({
